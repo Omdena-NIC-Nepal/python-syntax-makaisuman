@@ -7,9 +7,8 @@ def format_string(name, age):
     Returns:
         str: Formatted string
     """
-    name= name
-    age= age
-    return f"My name is {name} and I am {age} old"
+    
+    return f"My name is {name} and I am {age} years old" 
 
 def conditional_check(number):
     """
@@ -109,7 +108,12 @@ def arithmetic_ops(a, b):
     Returns:
         dict: Results of arithmetic operations
     """
-    pass
+    return {
+        "sum": a + b,
+        "difference": a - b,
+        "product": a * b,
+        "quotient": a / b if b != 0 else None,
+    }
 
 def logical_ops(x, y):
     """
@@ -120,7 +124,11 @@ def logical_ops(x, y):
     Returns:
         dict: Results of logical operations
     """
-    pass
+    return{
+        "and": x and y,
+        "or": x or y,
+        "not_x": not x
+    }
 
 def bitwise_ops(a, b):
     """
@@ -131,4 +139,8 @@ def bitwise_ops(a, b):
     Returns:
         dict: Results of bitwise operations
     """
-    pass
+    return {
+        "and": a & b,
+        "or": a | b,
+        "xor": a ^ b,
+    }
