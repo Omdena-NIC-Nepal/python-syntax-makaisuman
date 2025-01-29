@@ -7,7 +7,9 @@ def format_string(name, age):
     Returns:
         str: Formatted string
     """
-    pass
+    name= name
+    age= age
+    return f"My name is {name} and I am {age} old"
 
 def conditional_check(number):
     """
@@ -17,7 +19,12 @@ def conditional_check(number):
     Returns:
         str: "Greater", "Lesser", or "Equal"
     """
-    pass
+    if number > 10:
+        return "Greater"
+    elif number < 10:
+        return "Lesser"
+    else:
+        return "Equal"
 
 def loop_sum(n):
     """
@@ -27,7 +34,10 @@ def loop_sum(n):
     Returns:
         int: Sum of numbers
     """
-    pass
+    sumOfNumber = 0
+    for i in range(1, n + 1):
+        sumOfNumber= sumOfNumber + i
+    return sumOfNumber
 
 def list_operations(numbers):
     """
@@ -37,7 +47,25 @@ def list_operations(numbers):
     Returns:
         tuple: (sum, max, min)
     """
-    pass
+    # Initialize sum, max, and min
+    sumOfNumber = 0
+    max_value = numbers[0]
+    min_value = numbers[0]
+    
+    # Loop through the list to calculate sum, max, and min
+    for num in numbers:
+        # Calculate the sum
+        sumOfNumber = sumOfNumber + num
+        
+        # Update max_value if current number is greater
+        if num > max_value:
+            max_value = num
+        
+        # Update min_value if current number is smaller
+        if num < min_value:
+            min_value = num
+    
+    return sumOfNumber, max_value, min_value
 
 def dict_operations(students_dict):
     """
@@ -47,7 +75,14 @@ def dict_operations(students_dict):
     Returns:
         list: Names of students with scores > 80
     """
-    pass
+    above_80_students = []
+    
+    # Loop through the dictionary
+    for student, score in students_dict.items():
+        if score > 80:
+            above_80_students.append(student)
+    
+    return above_80_students
 
 def set_operations(list1, list2):
     """
@@ -58,7 +93,12 @@ def set_operations(list1, list2):
     Returns:
         set: Common elements
     """
-    pass
+    #converting list to sets    
+    set1= set(list1)
+    set2= set(list2)
+    #finding common elements
+    common_elements = set1.intersection(set2)
+    return common_elements
 
 def arithmetic_ops(a, b):
     """
