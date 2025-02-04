@@ -11,7 +11,7 @@ def format_string(name: str, age: int) -> str:
     pass
 
     return f"My name is {name} and I am {age} years old"
-    return f"My name is {name} and I am {age} years old"
+    
 str1 = format_string("John", 25)
 str2 = format_string("Alice", 30)
 print(str1)
@@ -36,7 +36,7 @@ def conditional_check(number):
     
 print(conditional_check(11))  # Output: Greater
 print(conditional_check(2))   # Output: Lesser
-print(conditional_check(15))  # Output: Equal
+print(conditional_check(10))  # Output: Equal
 
 
 def loop_sum(n):
@@ -65,7 +65,7 @@ def list_operations(numbers):
     Returns:
         tuple: (sum, max, min)
     """
-    pass
+    
     return (sum(numbers), max(numbers), min(numbers))
 result1 = list_operations([1, 2, 3, 4, 5])
 result2 = list_operations([10, 20, 30])
