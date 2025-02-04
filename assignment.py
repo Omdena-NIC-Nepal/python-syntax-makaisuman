@@ -1,4 +1,5 @@
-def format_string(name, age):
+def format_string(name: str, age: int) -> str:
+
     """
     Create a formatted string using f-strings.
     Args:
@@ -7,8 +8,15 @@ def format_string(name, age):
     Returns:
         str: Formatted string
     """
-    
-    return f"My name is {name} and I am {age} years old" 
+    pass
+
+    return f"My name is {name} and I am {age} years old"
+    return f"My name is {name} and I am {age} years old"
+str1 = format_string("John", 25)
+str2 = format_string("Alice", 30)
+print(str1)
+print(str2)
+
 
 def conditional_check(number):
     """
@@ -18,12 +26,18 @@ def conditional_check(number):
     Returns:
         str: "Greater", "Lesser", or "Equal"
     """
+    pass
     if number > 10:
         return "Greater"
     elif number < 10:
         return "Lesser"
     else:
         return "Equal"
+    
+print(conditional_check(11))  # Output: Greater
+print(conditional_check(2))   # Output: Lesser
+print(conditional_check(15))  # Output: Equal
+
 
 def loop_sum(n):
     """
@@ -33,10 +47,15 @@ def loop_sum(n):
     Returns:
         int: Sum of numbers
     """
-    sumOfNumber = 0
+    pass
+    total = 0
     for i in range(1, n + 1):
-        sumOfNumber= sumOfNumber + i
-    return sumOfNumber
+        total += i
+    return total
+
+print(loop_sum(5)) 
+print(loop_sum(3)) 
+print(loop_sum(1))
 
 def list_operations(numbers):
     """
@@ -46,25 +65,12 @@ def list_operations(numbers):
     Returns:
         tuple: (sum, max, min)
     """
-    # Initialize sum, max, and min
-    sumOfNumber = 0
-    max_value = numbers[0]
-    min_value = numbers[0]
-    
-    # Loop through the list to calculate sum, max, and min
-    for num in numbers:
-        # Calculate the sum
-        sumOfNumber = sumOfNumber + num
-        
-        # Update max_value if current number is greater
-        if num > max_value:
-            max_value = num
-        
-        # Update min_value if current number is smaller
-        if num < min_value:
-            min_value = num
-    
-    return sumOfNumber, max_value, min_value
+    pass
+    return (sum(numbers), max(numbers), min(numbers))
+result1 = list_operations([1, 2, 3, 4, 5])
+result2 = list_operations([10, 20, 30])
+print(result1)
+print(result2)
 
 def dict_operations(students_dict):
     """
@@ -74,14 +80,20 @@ def dict_operations(students_dict):
     Returns:
         list: Names of students with scores > 80
     """
-    above_80_students = []
+    pass
+
+    return [name for name, score in students_dict.items() if score > 80]
+
+students = {
+    'Suman': 88,
+    'Makai': 91,
+    'Suraj': 85,
+    'Saman': 75
     
-    # Loop through the dictionary
-    for student, score in students_dict.items():
-        if score > 80:
-            above_80_students.append(student)
-    
-    return above_80_students
+}
+
+result = dict_operations(students)
+print(result)
 
 def set_operations(list1, list2):
     """
@@ -89,15 +101,18 @@ def set_operations(list1, list2):
     Args:
         list1 (list): First list
         list2 (list): Second list
+
+
     Returns:
         set: Common elements
     """
-    #converting list to sets    
-    set1= set(list1)
-    set2= set(list2)
-    #finding common elements
-    common_elements = set1.intersection(set2)
-    return common_elements
+    pass
+
+    return set(list1).intersection(list2)
+list1 = [1, 2, 3]
+list2 = [2, 3, 4]
+result = set_operations(list1, list2)
+print(result)
 
 def arithmetic_ops(a, b):
     """
@@ -108,12 +123,27 @@ def arithmetic_ops(a, b):
     Returns:
         dict: Results of arithmetic operations
     """
-    return {
-        "sum": a + b,
-        "difference": a - b,
-        "product": a * b,
-        "quotient": a / b if b != 0 else None,
+    pass
+
+# Initialize 
+    results = {
+        'sum': a + b,
+        'difference': a - b,
+        'product': a * b,
     }
+    
+    # avoid division by zero
+    if b != 0:
+        results['quotient'] = a / b
+    else:
+        results['quotient'] = None  # or you could use float('inf') to indicate infinity
+
+    return results
+
+result = arithmetic_ops(20, 1)
+print(result) 
+
+
 
 def logical_ops(x, y):
     """
@@ -124,11 +154,18 @@ def logical_ops(x, y):
     Returns:
         dict: Results of logical operations
     """
-    return{
-        "and": x and y,
-        "or": x or y,
-        "not_x": not x
+    pass
+
+# Initialize a dictionary to store results of logical operations
+    results = {
+        'and': x and y,    
+        'or': x or y,        
+        'not_x': not x,      
+        
     }
+    return results
+result = logical_ops(True, False)
+print(result)  
 
 def bitwise_ops(a, b):
     """
@@ -139,8 +176,14 @@ def bitwise_ops(a, b):
     Returns:
         dict: Results of bitwise operations
     """
-    return {
-        "and": a & b,
-        "or": a | b,
-        "xor": a ^ b,
+    pass
+# bitwise operations
+    results = {
+        'and': a & b,            # Bitwise and
+        'or': a | b,             # Bitwise or
+        'xor': a ^ b,            # Bitwise xor
     }
+    return results
+
+result = bitwise_ops(10, 5)  
+print(result)
